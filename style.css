@@ -1,0 +1,42 @@
+
+
+.heading1 {
+    margin-top: 50px;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+button {
+    background-color: #4b70e2;
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card .btn-block {
+    color: black;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.number {
+    font-size: 14px;
+    background-color: #4b70e2;
+    color: white;
+    padding: 8px 8px;
+    line-height: 20px;
+    border-radius: 5px;
+}
+
+.card i {
+    font-size: 14px;
+}
