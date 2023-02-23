@@ -104,6 +104,7 @@ function MinOfPositiveNumber() {
     } else {
         document.getElementById('result4').innerHTML = "Không có số dương trong mảng";
     }
+    
     document.getElementById('result4').innerHTML = "Số dương nhỏ nhất: " + min;
 }
 
@@ -142,13 +143,18 @@ function ChangePosition() {
     var input1Exercise6 = Number(document.getElementById('input1Bai6').value);
     var input2Exercise6 = Number(document.getElementById('input2Bai6').value);
 
-    var valueSo1 = myArray[input1Exercise6];
-    var valueSo2 = myArray[input2Exercise6];
+    var myArrCopy6 = [];
+    for ( var i = 0;i < myArray.length;i++) {
+        myArrCopy6.push(myArray[i])
+    }
 
-    myArray[input1Exercise6] = valueSo2;
-    myArray[input2Exercise6] = valueSo1;
+    var valueSo1 = myArrCopy6[input1Exercise6];
+    var valueSo2 = myArrCopy6[input2Exercise6];
 
-    document.getElementById('result6').innerHTML = "Mảng sau khi đổi: " + myArray;
+    myArrCopy6[input1Exercise6] = valueSo2;
+    myArrCopy6[input2Exercise6] = valueSo1;
+
+    document.getElementById('result6').innerHTML = "Mảng sau khi đổi: " + myArrCopy6;
 }
 document.getElementById('btn6').onclick = ChangePosition;
 
@@ -162,10 +168,16 @@ document.getElementById('btn6').onclick = ChangePosition;
 */
 
 function toArrangeUp() {
-    myArray.sort(function(a,b) {
+
+    var myArrCopy7 = [];
+    for ( var i = 0;i < myArray.length;i++) {
+        myArrCopy7.push(myArray[i])
+    }
+
+    myArrCopy7.sort(function(a,b) {
         return a-b;
     })
-    document.getElementById('result7').innerHTML = "Mảng sau khi sắp xếp: " + myArray;
+    document.getElementById('result7').innerHTML = "Mảng sau khi sắp xếp: " + myArrCopy7;
 }
 document.getElementById('btn7').onclick = toArrangeUp;
 
@@ -245,7 +257,7 @@ document.getElementById('btn9').onclick = isIntegerNumber;
     B3: Thông báo kết quả ra giao diện bằng sự kiện click button và in ra kết quả
 */
 
-function CompareAmountOfNumber() {
+function CompareNumber() {
     var NegativeNumber = myArray.filter(function(item) {
         return item < 0;
     })
@@ -261,4 +273,4 @@ function CompareAmountOfNumber() {
     }
 }
 
-document.getElementById('btn10').onclick = CompareAmountOfNumber;
+document.getElementById('btn10').onclick = CompareNumber;
